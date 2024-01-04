@@ -7,9 +7,10 @@ const WebSocketComponent = () => {
   const [message, setMessage] = useState<any>("");
    const [roomName, setroomName] = useState<any>("");
   const [chat, setchat] = useState<any>([]);
+  console.log("NEXT_PUBLIC_SERVER_PORT", process.env.NEXT_PUBLIC_SERVER_PORT!);
   useEffect(() => {
     // Connect to the WebSocket server
-    socket = io(process.env.NEXT_APP_SERVER_PORT!);
+    socket = io(process.env.NEXT_PUBLIC_SERVER_PORT!);
     // Event listener for connection established
     socket.on("connect", () => {
       console.log("Connected to server!");
