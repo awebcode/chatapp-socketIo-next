@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nosifer&family=Poppins:wght@400;600;800;900&family=Ubuntu:wght@500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+@layer base {
+  h1 {
+    @apply text-3xl md:text-5xl m-1 font-bold leading-10 text-white;
+  }
+  p {
+    @apply text-xs md:text-sm leading-10;
+  }
+}
+@layer components {
+  .btn {
+    @apply bg-white px-8 py-3  transition-all hover:bg-purple-300 duration-300;
+  }
+  .flexCenter {
+    @apply flex justify-center items-center;
+  }
+}
+body {
+  background-color: black;
+  font-family: "Ubuntu", sans-serif;
+}
