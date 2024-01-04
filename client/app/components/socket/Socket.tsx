@@ -9,7 +9,7 @@ const WebSocketComponent = () => {
   const [chat, setchat] = useState<any>([]);
   useEffect(() => {
     // Connect to the WebSocket server
-    socket= io(process.env.SERVER_PORT!);
+    socket = io(process.env.NEXT_APP_SERVER_PORT!);
     // Event listener for connection established
     socket.on("connect", () => {
       console.log("Connected to server!");
